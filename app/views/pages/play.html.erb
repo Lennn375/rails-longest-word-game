@@ -1,0 +1,15 @@
+<% letters = ('a'..'z').to_a %>
+<% @start_time = Time.now %>
+<p>
+  <% number_of_letters = (3..10).to_a %>
+  <% @grid = [] %>
+  <% number_of_letters.each do |number| %>
+    <%= letter = letters.sample %>
+    <% @grid << letter %>
+  <% end %>
+</p>
+
+<form action="/result">
+  <input type="text" name="word">
+  <input type="submit" value="see score">
+</form>

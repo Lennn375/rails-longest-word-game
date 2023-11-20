@@ -1,0 +1,32 @@
+<%= submit_time =  Time.now%>
+<% sleep(2) %>
+<%= Time.current %>
+<%= @start_time %>
+<p>
+  Here is your grid:
+</p>
+  <%= @grid %>
+<p>
+*****************************************************
+</p>
+<p>
+  What is your longest word?
+</p>
+<p>
+  <%= user_word = params["word"] %>
+</p>
+<p>
+  ******** Now your results ********
+</p>
+<p>
+  Your word: <%= user_word %>
+</p>
+<p>
+  <%# Time Taken to answer: <%= (@start_time - submit_time) %> %>
+</p>
+<p>
+  Your score: XY
+</p>
+<p>
+  Message: Well Done!
+</p>
